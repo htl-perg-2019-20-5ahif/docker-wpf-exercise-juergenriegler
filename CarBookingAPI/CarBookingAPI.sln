@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarBookingAPI", "CarBookingAPI\CarBookingAPI.csproj", "{F74C2D5B-7BBD-4173-8B32-B9C9E7845492}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F74C2D5B-7BBD-4173-8B32-B9C9E7845492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F74C2D5B-7BBD-4173-8B32-B9C9E7845492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F74C2D5B-7BBD-4173-8B32-B9C9E7845492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F74C2D5B-7BBD-4173-8B32-B9C9E7845492}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7B4A5A7-3100-4A70-BB06-2E0E34724F85}
+	EndGlobalSection
+EndGlobal
