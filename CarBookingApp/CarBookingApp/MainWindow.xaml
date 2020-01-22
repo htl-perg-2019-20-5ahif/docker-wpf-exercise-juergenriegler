@@ -1,0 +1,54 @@
+﻿<Window x:Class="CarBookingApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarBookingApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <TabControl>
+            <TabItem Width="150" Height="30" Header="Cars">
+                <DataGrid ItemsSource="{Binding Path=Cars}" IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding ID}" Header="ID" />
+                        <DataGridTextColumn Binding="{Binding Carmake}" Header="CarMake" />
+                        <DataGridTextColumn Binding="{Binding CarModel}" Header="CarModel" />
+                        <DataGridTextColumn Binding="{Binding CarIdentificationNumber}" Header="Identification Number" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Width="150" Height="30" Header="Availability">
+                <StackPanel>
+
+                    <TextBlock Text="Search for available cars on date:" Margin="12 12 0 0" />
+                    <DatePicker Name="AvailabilityDatePicker" Width="100" Margin="12 5 0 0" HorizontalAlignment="Left"/>
+
+                    <Button Content="find" Width="100" HorizontalAlignment="Left" Margin="12 12 0 12" Click="RefreshButtonClicked" />
+
+                    <DataGrid ItemsSource="{Binding Path=CarsAvailable}" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding ID}" Header="ID" />
+                            <DataGridTextColumn Binding="{Binding Carmake}" Header="CarMake" />
+                            <DataGridTextColumn Binding="{Binding CarModel}" Header="CarModel" />
+                            <DataGridTextColumn Binding="{Binding CarIdentificationNumber}" Header="Identification Number" />
+                        </DataGrid.Columns>
+                    </DataGrid>    
+                </StackPanel>
+            </TabItem>
+            <TabItem Width="150" Height="30" Header="Book Car">
+                <StackPanel>
+                    <TextBlock Text="ID of car to book:" Margin="12 12 0 0" />
+                    <TextBox Name="BookingCarIdTextBox" InputScope="Number" Width="100" HorizontalAlignment="Left" Margin="12 5 0 0" />
+
+                    <TextBlock Text="When to book:" Margin="12 12 0 0" />
+                    <DatePicker Name="BookingDateDatePicker" Width="100" Margin="12 5 0 0" HorizontalAlignment="Left"/>
+
+                    <Button Content="Book" Click="BookButtonClicked" Width="100" HorizontalAlignment="Left" Margin="12 12 0 0" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
